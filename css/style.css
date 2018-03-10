@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,700');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+background-color: #F8F8F8;
+font-size: 16px;
+font-family: "Open Sans", Helvetica, Arial, sans-serif;
+font-weight: 300;
+}
+
+h1, h2 {
+text-align: center;
+color: #777676;
+font-weight: 300;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  margin: 0;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 80px;
+  line-height:130px;
+  color: #05dbd9;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  vertical-align: center;
+}
+
+.gameboard {
+  width: 450px;
+  height: 460px;
+  margin: 50px auto;
+  padding: 0;
+}
+
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine {
+
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#one {
+  border-bottom: 5px solid #C5C5C5;
+  border-right: 5px solid #C5C5C5;
+}
+
+#two {
+  border-bottom: 5px solid #C5C5C5;
+  border-right: 5px solid #C5C5C5;
+}
+
+#three {
+  border-bottom: 5px solid #C5C5C5;
+}
+
+#four {
+  border-bottom: 5px solid #C5C5C5;
+  border-right: 5px solid #C5C5C5;
+}
+#five {
+  border-bottom: 5px solid #C5C5C5;
+  border-right: 5px solid #C5C5C5;
+}
+
+#six {
+  border-bottom: 5px solid #C5C5C5;
+
+}
+#seven {
+  border-right: 5px solid #C5C5C5;
+}
+
+#eight {
+  border-right: 5px solid #C5C5C5;
+}
+
+#nine {
+
+}
+
+.players {
+  width: 80%;
+  margin: 5em auto;
+}
+
+.p1 {
+  width: 49%;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.p2 {
+  width: 49%;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.p1-indicator {
+  width: 49%;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.p2-indicator {
+  width: 49%;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.p1-indicator h2 {
+  font-weight: 600;
+  color: #05dbd9;
+  opacity: 1;
+  text-align: center;
+}
+
+.p2-indicator h2 {
+  font-weight: 600;
+  color: #e88c7d;
+  opacity: 1;
+  text-align: center;
+}

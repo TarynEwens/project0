@@ -1,0 +1,36 @@
+TIC TAC TOE LOGIC
+
+Row 1:  1, 2, 3
+Row 2:  4, 5, 6
+Row 3:  7, 8, 9
+
+Ways to win:
+
+horizontal
+  1, 2, 3
+  4, 5, 6
+  7, 8, 9
+
+vertical
+  1, 4, 7
+  2, 5, 8
+  3, 6, 9
+
+diagonal
+  1, 5, 9
+  3, 5, 7
+
+let playerOne;
+let playerTwo;
+
+available array (1 - 9)
+p1score array
+p2score array
+
+Add class to playerOne icon to highlight.
+when playerOne clicks a div, fade in X in div - push div number into p1score array and remove div # from available array. Remove class from playerOne icon  and add class to playerTwo icon to highlight. 
+when playerTwo clicks a div, fade in O in the div - push div number into p2score array  and remove div # from available array. Remove class from playerTwo icon  and add class to playerOne icon to highlight.
+
+sort p1 and p2 score arrays into order .sort()
+if p1 or p2 score array is === to any of the winning arrays create div to fade in saying "player one or player two wins!" with a link saying "play again"
+else if available array is empty, create div to fade in saying "draw!" with a link saying "play again"
