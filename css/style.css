@@ -16,10 +16,12 @@ h1, h2 {
 text-align: center;
 color: #777676;
 font-weight: 300;
+
 }
 
 h1 {
   font-size: 3em;
+  margin: 35px auto;
 }
 
 h2 {
@@ -32,19 +34,13 @@ main {
 }
 
 p {
-  font-size: 80px;
-  line-height:130px;
-  color: #05dbd9;
-  font-weight: 600;
-  text-align: center;
-  margin: 0;
-  vertical-align: center;
+
 }
 
 .gameboard {
   width: 450px;
   height: 460px;
-  margin: 50px auto;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -100,7 +96,7 @@ p {
 
 .players {
   width: 80%;
-  margin: 5em auto;
+  margin: 95px auto;
 }
 
 .p1 {
@@ -120,6 +116,7 @@ p {
   display: inline-block;
   margin: 0 auto;
   padding: 0;
+  opacity: 1;
 }
 
 .p2-indicator {
@@ -127,18 +124,49 @@ p {
   display: inline-block;
   margin: 0 auto;
   padding: 0;
+  opacity: 1;
 }
 
 .p1-indicator h2 {
   font-weight: 600;
   color: #05dbd9;
-  opacity: 1;
   text-align: center;
 }
 
 .p2-indicator h2 {
   font-weight: 600;
   color: #e88c7d;
-  opacity: 1;
   text-align: center;
+}
+
+.banner {
+  font-size: 2em;
+  font-weight: 300;
+  color: #777676;
+}
+
+.banner a {
+  color: #777676;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.x {
+  font-size: 80px;
+  line-height:130px;
+  color: #05dbd9;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  vertical-align: center;
+}
+
+.o {
+  font-size: 80px;
+  line-height:130px;
+  color: #e88c7d;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  vertical-align: center;
 }
