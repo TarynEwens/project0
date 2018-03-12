@@ -3,7 +3,7 @@ let result;
 let currentPlay;
 let icon;
 let pClass;
-let currentPlayer;
+let currentPlayer = 0;
 let p1Name;
 let p2Name;
 
@@ -20,22 +20,36 @@ $(document).ready(function() {
     $('.p2 h2').text(`${ p2Name }: 0 wins`);
     landingToMain();
     startingPlayer();
-    game();
+    console.log(currentPlayer);
 
   });
 
 });
 
 let startingPlayer = function() {
+  $('.players p').fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeIn(1000).fadeIn(1000).fadeIn(1000);
+
   $('.p1').on('click', function () {
     currentPlayer = 0;
     $('.p2-indicator').css('opacity', '0'); // Turn opacity to 1 for p2 indicator
     $('.p1-indicator').css('opacity', '1'); // Turn opacity to 0 for p1 indicator
+    console.log(currentPlayer)
+    $('.players p').css('display', 'none');
+    $('.p1').off('click');
+    $('.p2 h2:hover').css('font-weight', '300');
+    $('.p1 h2:hover').css('font-weight', '300');
+    game();
   })
   $('.p2').on('click', function () {
     currentPlayer = 1;
     $('.p1-indicator').css('opacity', '0'); // Turn opacity to 1 for p1 indicator
     $('.p2-indicator').css('opacity', '1'); // Turn opacity to 0 for p2 indicator
+    console.log(currentPlayer);
+    $('.players p').css('display', 'none');
+    $('.p2').off('click');
+    $('.p2 h2:hover').css('font-weight', '300');
+    $('.p1 h2:hover').css('font-weight', '300');
+    game();
   })
 
 };
@@ -50,12 +64,15 @@ let landingToMain = function() { // change display from landing page to main pag
 
 let game = function() {
   // currentPlayer = 0;
-  $('.p1-indicator').css('opacity', '1'); // Start player one indicator opacity to 1 (visible)
+  // $('.p1-indicator').css('opacity', '1'); // Start player one indicator opacity to 1 (visible)
+  console.log(currentPlayer);
   click();
+
 };
 
 
 let click = function() {
+  console.log(currentPlayer);
   if (currentPlayer === 0) {
     icon = "X";
     pClass = "x";
@@ -63,6 +80,7 @@ let click = function() {
     icon = "O";
     pClass = "o";
   }
+  console.log(currentPlayer);
 
   $('#one').on('click', function () {
     currentPlay = 1;
