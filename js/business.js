@@ -163,12 +163,12 @@ const findWin = function() {
 const nextPlayer = function() { // If current player is 0 (player 1), make current player 1 (player 2) and vice versa.
   if (currentPlayer === 0) {
     currentPlayer = 1;
-    $('#p2-indicator').css('opacity', '1'); //TODO: Turn opacity to 1 for p2 indicator
-    $('#p1-indicator').css('opacity', '0'); //TODO: Turn opacity to 0 for p1 indicator
+    $('.p2-indicator').css('opacity', '1'); // Turn opacity to 1 for p2 indicator
+    $('.p1-indicator').css('opacity', '0'); // Turn opacity to 0 for p1 indicator
   } else {
     currentPlayer = 0;
-  $('#p1-indicator').css('opacity', '1');//TODO: Turn opacity to 1 for p1 indicator
-  $('#p2-indicator').css('opacity', '0');//TODO: Turn opacity to 0 for p2 indicator
+  $('.p1-indicator').css('opacity', '1'); // Turn opacity to 1 for p1 indicator
+  $('.p2-indicator').css('opacity', '0'); // Turn opacity to 0 for p2 indicator
   }
 };
 

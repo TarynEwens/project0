@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 let game = function() {
   currentPlayer = 0;
-  $('#p1-indicator').css('opacity', '1');
+  $('.p1-indicator').css('opacity', '1'); // Start player one indicator opacity to 1 (visible)
 
   click();
 };
