@@ -22,7 +22,6 @@ let game = function() {
 
 
 let click = function() {
-  console.log("click currentPlayer = " + currentPlayer);
   if (currentPlayer === 0) {
     icon = "X";
     pClass = "x";

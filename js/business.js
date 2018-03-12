@@ -1,6 +1,6 @@
 console.log("connected business");
 
-const board = {
+let board = {
   1: "",
   2: "",
   3: "",
@@ -27,17 +27,11 @@ let win = false;
 
 let p1; // player one
 let p2; // player two
-let brandNewCurrent;
 let playerName;
 let winnerBanner;
-let drawBanner;
 let currentWins;
 let p1Wins = 0;
 let p2Wins = 0;
-let match = 0;
-let firstWin;
-let firstLetter;
-
 
 
 
@@ -140,21 +134,26 @@ const findMatch = function(){
 const findWin = function() {
 
   if (x) {
-    winnerBanner = $(`<p class="banner"> ${ playerName } wins! <a href="#">Try again?</a></p>`); //create a new paragraph saying which player won
+    winnerBanner = $(`<p class="banner"> ${ playerName } wins! <a href="#" class="reset">Try again?</a></p>`); //create a new paragraph saying which player won
     $('.gameboard').append(winnerBanner); // append to DOM after gameboard
     $('#one, #two, #three, #four, #five, #six, #seven, #eight, #nine').off('click'); //disable gameboard - game is over
     p1Wins = p1Wins + 1; // add 1 win to p1Wins
+    $('.p1 h2').text(`Player One: ${ p1Wins } wins`)
+    nextGame();
   }
   if (o) {
-    winnerBanner = $(`<p class="banner"> ${ playerName } wins! <a href="#">Try again?</a></p>`); //create a new paragraph saying which player won
+    winnerBanner = $(`<p class="banner"> ${ playerName } wins! <a href="#" class="reset">Try again?</a></p>`); //create a new paragraph saying which player won
     $('.gameboard').append(winnerBanner); // append to DOM after gameboard
     $('#one, #two, #three, #four, #five, #six, #seven, #eight, #nine').off('click'); //disable gameboard - game is over
     p2Wins = p2Wins + 1; // add 1 win to p2Wins
+    $('.p2 h2').text(`Player Two: ${ p2Wins } wins`)
+    nextGame();
   }
   if (draw) {
-    winnerBanner = $(`<p class="banner"> It's a draw. <a href="#">Try again?</a></p>`);
+    winnerBanner = $(`<p class="banner"> It's a draw. <a href="#" class="reset">Try again?</a></p>`);
     $('.gameboard').append(winnerBanner);
     $('#one, #two, #three, #four, #five, #six, #seven, #eight, #nine').off('click'); //disable gameboard - game is over
+    nextGame();
 
   }
   nextPlayer();
@@ -172,6 +171,26 @@ const nextPlayer = function() { // If current player is 0 (player 1), make curre
   }
 };
 
-// const nextGame = function() { TODO: Function to clear gameboard and start again
-//
-// };
+const nextGame = function() { //TODO: Function to clear gameboard and start again
+$('.reset').on('click', function() {
+  $('.x').remove();
+  $('.o').remove();
+  $('.banner').remove();
+  available = [1, 2, 3, 4, 5, 6, 7, 8, 9]; // plays available
+  board = {
+    1: "",
+    2: "",
+    3: "",
+    4: "",
+    5: "",
+    6: "",
+    7: "",
+    8: "",
+    9: ""
+  };
+  x = false;
+  o = false;
+  draw = false;
+  game();
+});
+};
