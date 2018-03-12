@@ -39,12 +39,12 @@ let p2Wins = 0;
 const findPlayer = function(currentPlayer) {
   if (currentPlayer === 0) { //If current player is 0 (player 1) then currentPlayed is p1Played, currentName is Player one.
     // currentPlayed = p1Played;
-    playerName = "Player one";
+    playerName = p1Name;
     icon = "O";
     pClass = "o";
   } else if (currentPlayer === 1) { //If current player is 1 (player 2) then currentPlayed is p2Played, current name is Player two.
     // currentPlayed = p2Played;
-    playerName = "Player two";
+    playerName = p2Name;
     icon = "X";
     pClass = "x";
   }
@@ -138,7 +138,7 @@ const findWin = function() {
     $('.gameboard').after(winnerBanner); // append to DOM after gameboard
     $('#one, #two, #three, #four, #five, #six, #seven, #eight, #nine').off('click'); //disable gameboard - game is over
     p1Wins = p1Wins + 1; // add 1 win to p1Wins
-    $('.p1 h2').text(`Player One: ${ p1Wins } wins`)
+    $('.p1 h2').text(`${ p1Name }: ${ p1Wins } wins`)
     nextGame();
   }
   if (o) {
@@ -146,7 +146,7 @@ const findWin = function() {
     $('.gameboard').after(winnerBanner); // append to DOM after gameboard
     $('#one, #two, #three, #four, #five, #six, #seven, #eight, #nine').off('click'); //disable gameboard - game is over
     p2Wins = p2Wins + 1; // add 1 win to p2Wins
-    $('.p2 h2').text(`Player Two: ${ p2Wins } wins`)
+    $('.p2 h2').text(`${ p2Name }: ${ p2Wins } wins`)
     nextGame();
   }
   if ((draw) && (o === false) && (x === false)) {

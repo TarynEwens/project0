@@ -4,40 +4,53 @@ let currentPlay;
 let icon;
 let pClass;
 let currentPlayer;
+let p1Name;
+let p2Name;
 
 
 
 $(document).ready(function() {
   // inputSubmit();
-  game();
 
+
+  $('#playerNameForm').submit(function () {
+    p1Name = $('#p1Name').val();
+    p2Name = $('#p2Name').val();
+    $('.p1 h2').text(`${ p1Name }: 0 wins`);
+    $('.p2 h2').text(`${ p2Name }: 0 wins`);
+    landingToMain();
+    startingPlayer();
+    game();
+
+  });
 
 });
 
-// let inputSubmit = function() {
-//   $('#p1Submit').on('click', function () {
-//     console.log('button click')
-//     icon = $('#p1Icon').val();
-//     console.log(icon);
-// })
-//     $('#p2Submit').on('click', function () {
-//       console.log('button click')
-//       icon = $('#p2Icon').val();
-//       console.log(icon);
-//
-// })
-// };
+let startingPlayer = function() {
+  $('.p1').on('click', function () {
+    currentPlayer = 0;
+    $('.p2-indicator').css('opacity', '0'); // Turn opacity to 1 for p2 indicator
+    $('.p1-indicator').css('opacity', '1'); // Turn opacity to 0 for p1 indicator
+  })
+  $('.p2').on('click', function () {
+    currentPlayer = 1;
+    $('.p1-indicator').css('opacity', '0'); // Turn opacity to 1 for p1 indicator
+    $('.p2-indicator').css('opacity', '1'); // Turn opacity to 0 for p2 indicator
+  })
+
+};
 
 
-
-
-
-
+let landingToMain = function() { // change display from landing page to main page page
+  $('.landing').css('display', 'none');
+  $('.gameboard').css('display', 'inherit');
+  // $('header').css('display', 'inherit');
+  $('.players').css('display', 'inherit');
+};
 
 let game = function() {
-  currentPlayer = 0;
+  // currentPlayer = 0;
   $('.p1-indicator').css('opacity', '1'); // Start player one indicator opacity to 1 (visible)
-
   click();
 };
 
@@ -46,6 +59,9 @@ let click = function() {
   if (currentPlayer === 0) {
     icon = "X";
     pClass = "x";
+  } else {
+    icon = "O";
+    pClass = "o";
   }
 
   $('#one').on('click', function () {

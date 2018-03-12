@@ -50,11 +50,12 @@ font-weight: 300;
 
 h1 {
   font-size: 3em;
-  margin: 35px auto;
+  margin: 35px auto 10px auto;
 }
 
 h2 {
   margin: 0;
+  display: inline-block;
 }
 
 main {
@@ -62,15 +63,33 @@ main {
   margin: 0 auto;
 }
 
-p {
-
+i {
+  color: #777676;
+  font-size: 1.5em;
+  font-weight: 300;
+  text-align: center;
 }
+
+header {
+   text-align: center;
+   /* display: none; */
+}
+
+p {
+  text-align: center;
+  color: #777676;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+
 
 .gameboard {
   width: 345px;
   height: 345px;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
   padding: 0;
+  display: none;
 
 }
 
@@ -168,21 +187,33 @@ p {
 
 }
 
+
 .players {
   width: 80%;
-  margin: 60px auto 0 auto;
+  margin: 60px auto;
+  display: none;
 }
 
 .p1 {
   width: 49%;
   display: inline-block;
   margin: 0 auto;
+  text-align: center;
+}
+
+.p1 h2:hover {
+  font-weight: 600;
 }
 
 .p2 {
   width: 49%;
   display: inline-block;
   margin: 0 auto;
+  text-align: center;
+}
+
+.p2 h2:hover {
+  font-weight: 600;
 }
 
 .p1-indicator {
@@ -191,6 +222,7 @@ p {
   margin: 0 auto;
   padding: 0;
   opacity: 0;
+  text-align: center;
 }
 
 .p2-indicator {
@@ -199,6 +231,7 @@ p {
   margin: 0 auto;
   padding: 0;
   opacity: 0;
+  text-align: center;
 }
 
 .p1-indicator h2 {
@@ -245,32 +278,27 @@ p {
   text-align: center;
   margin: 0;
   vertical-align: center;
-}
-
-.iconinputdiv {
-  width: 49%;
-  display: inline-block;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.iconinputdiv p {
-  font-family: "Open Sane", "Helvetica", Arial, sans-serif;
-  font-weight: 300;
-  color: #777676;
-  text-align: center;
+  margin: 10px auto;
 }
 
 input {
-  font-family: "Open Sane", "Helvetica", Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica", Arial, sans-serif;
   font-weight: 300;
-  color: #777676;
+  font-size: 1.5em;
+  color: rgba(119,118,118,0.5);
   text-align: center;
   background-color: #F8F8F8;
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  border-bottom: 1px solid #777676;
+  border-bottom: 2px solid #777676;
+  display: block;
+  margin: 30px auto;
+  width: 12em;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(119,118,118,0.5);
 }
 
 button {
@@ -279,10 +307,17 @@ button {
   color: #777676;
   text-align: center;
   background-color: #F8F8F8;
+  display: block;
+  margin: 10px auto;
 }
 
 .iconinputdiv input {
   width: 6em;
   margin: 0 auto;
 
+}
+
+.landing {
+  width: 50%;
+  margin: 80px auto;
 }

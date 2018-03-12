@@ -7,16 +7,30 @@
   <title>Minimalist Tic Tac Toe</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/business.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-
 <header>
   <h1>Tic Tac Toe</h1>
+  <!-- <i class="fas fa-chevron-circle-left"></i> -->
 </header>
 <main>
+
+  <div class="landing">
+
+    <div class="playernames">
+      <form id="playerNameForm">
+        <input id="p1Name" type="text" placeholder="Player one" maxlength="10">
+        <input id="p2Name" type="text" placeholder="Player two" maxlength="10">
+        <button id="submit">Submit</button>
+      </form>
+    </div>
+
+  </div>
+
 
   <div class="gameboard">
 
@@ -34,21 +48,13 @@
       <tr>
         <td id="seven"><p class="parseven"></p></td>
         <td id="eight"><p class="pareight"></p></td>
-        <td id="nine"><p class="partnine"></p></td>
+        <td id="nine"><p class="parnine"></p></td>
       </tr>
     </table>
-    <!-- <div id="one"><p class="parone"></p></div
-      ><div id="two"><p class="partwo"></p></div
-      ><div id="three"><p class="parthree"></p></div
-      ><div id="four"><p class="parfour"></p></div
-      ><div id="five"><p class="parfive"></p></div
-      ><div id="six"><p class="parsix"></p></div
-      ><div id="seven"><p class="parseven"></p></div
-      ><div id="eight"><p class="pareight"></p></div
-      ><div id="nine"><p class="parnine"></p></div> -->
 </div>
 
   <div class="players">
+    <p>Who will play first?</p>
     <div class="p1">
       <h2>Player One: 0 wins</h2>
     </div>
@@ -61,18 +67,7 @@
     <div class="p2-indicator">
       <h2>O</h2>
     </div>
-    <!-- <div class="iconinputdiv p1">
-      <p>Choose your playing icon:</p>
-        <input id="p1Icon" type="text" name="icon" value="X" maxlength="3">
-        <button id="p1Submit">Go</button>
-    </div>
-    <div class="iconinputdiv p2">
-      <p>Choose your playing icon:</p>
-      <input id="p2Icon" type="text" name="icon" value="O" maxlength="3">
-      <button id="p2Submit">Go</button>
-    </div> -->
   </div>
-
 </main>
 <footer></footer>
 
