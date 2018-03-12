@@ -8,10 +8,31 @@ let currentPlayer;
 
 
 $(document).ready(function() {
-
+  // inputSubmit();
   game();
 
+
 });
+
+// let inputSubmit = function() {
+//   $('#p1Submit').on('click', function () {
+//     console.log('button click')
+//     icon = $('#p1Icon').val();
+//     console.log(icon);
+// })
+//     $('#p2Submit').on('click', function () {
+//       console.log('button click')
+//       icon = $('#p2Icon').val();
+//       console.log(icon);
+//
+// })
+// };
+
+
+
+
+
+
 
 let game = function() {
   currentPlayer = 0;
@@ -29,24 +50,19 @@ let click = function() {
 
   $('#one').on('click', function () {
     currentPlay = 1;
-    let result = $(`<p class="${ pClass }"> ${ icon } </p>`);
+    let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
     $('.parone').append(result);
     board[1] = `${ icon }`;
+    findPlayer(currentPlayer);
     $('#one').off('click');
 
-    // if (currentPlayer === "p1") {
-    //   $('#one > p').addClass('p1-indicator')
-    // } else if (currentPlayer === "p2") {
-    //   $('#one > p').addClass('p2-indicator')
-    // }
-    findPlayer(currentPlayer);
 
 
   });
 
   $('#two').on('click', function () {
     currentPlay = 2;
-    let result = $(`<p class="${ pClass }"> ${ icon } </p>`);
+    let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
     $('.partwo').append(result);
     board[2] = `${ icon }`;
     findPlayer(currentPlayer);
@@ -55,7 +71,7 @@ let click = function() {
 
   $('#three').on('click', function () {
     currentPlay = 3;
-    let result = $(`<p class="${ pClass }"> ${ icon } </p>`);
+    let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
     $('.parthree').append(result);
     board[3] = `${ icon }`;
     findPlayer(currentPlayer);
@@ -64,7 +80,7 @@ let click = function() {
 
   $('#four').on('click', function () {
     currentPlay = 4;
-    let result = $(`<p class="${ pClass }"> ${ icon } </p>`);
+    let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
     $('.parfour').append(result);
     board[4] = `${ icon }`;
     findPlayer(currentPlayer);
@@ -73,7 +89,7 @@ let click = function() {
 
   $('#five').on('click', function () {
     currentPlay = 5;
-    let result = $(`<p class="${ pClass }"> ${ icon } </p>`);
+    let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
     $('.parfive').append(result);
     board[5] = `${ icon }`;
     findPlayer(currentPlayer);
@@ -82,7 +98,7 @@ let click = function() {
 
   $('#six').on('click', function () {
     currentPlay = 6;
-    let result = $(`<p class="${ pClass }"> ${ icon } </p>`);
+    let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
     $('.parsix').append(result);
     board[6] = `${ icon }`;
     findPlayer(currentPlayer);
@@ -91,7 +107,7 @@ let click = function() {
 
   $('#seven').on('click', function () {
     currentPlay = 7;
-    let result = $(`<p class="${ pClass }"> ${ icon } </p>`);
+    let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
     $('.parseven').append(result);
     board[7] = `${ icon }`;
     findPlayer(currentPlayer);
@@ -100,7 +116,7 @@ let click = function() {
 
   $('#eight').on('click', function () {
     currentPlay = 8;
-    let result = $(`<p class="${ pClass }"> ${ icon } </p>`);
+    let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
     $('.pareight').append(result);
     board[8] = `${ icon }`;
     findPlayer(currentPlayer);
@@ -109,7 +125,7 @@ let click = function() {
 
   $('#nine').on('click', function () {
     currentPlay = 9;
-    let result = $(`<p class="${ pClass }"> ${ icon } </p>`);
+    let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
     $('.parnine').append(result);
     board[9] = `${ icon }`;
     findPlayer(currentPlayer);

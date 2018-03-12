@@ -125,7 +125,7 @@ const findMatch = function(){
     o = true;
   }
 
-  if (available.length === 0) {
+  else if (available.length === 0) {
     draw = true;
   }
   findWin();
@@ -134,24 +134,24 @@ const findMatch = function(){
 const findWin = function() {
 
   if (x) {
-    winnerBanner = $(`<p class="banner"> ${ playerName } wins! <a href="#" class="reset">Try again?</a></p>`); //create a new paragraph saying which player won
-    $('.gameboard').append(winnerBanner); // append to DOM after gameboard
+    winnerBanner = $(`<p class="banner"> ${ playerName } wins! <a href="#" class="reset">Try again?</a></p>`).fadeIn( "slow" ); //create a new paragraph saying which player won
+    $('.gameboard').after(winnerBanner); // append to DOM after gameboard
     $('#one, #two, #three, #four, #five, #six, #seven, #eight, #nine').off('click'); //disable gameboard - game is over
     p1Wins = p1Wins + 1; // add 1 win to p1Wins
     $('.p1 h2').text(`Player One: ${ p1Wins } wins`)
     nextGame();
   }
   if (o) {
-    winnerBanner = $(`<p class="banner"> ${ playerName } wins! <a href="#" class="reset">Try again?</a></p>`); //create a new paragraph saying which player won
-    $('.gameboard').append(winnerBanner); // append to DOM after gameboard
+    winnerBanner = $(`<p class="banner"> ${ playerName } wins! <a href="#" class="reset">Try again?</a></p>`).fadeIn( "slow" ); //create a new paragraph saying which player won
+    $('.gameboard').after(winnerBanner); // append to DOM after gameboard
     $('#one, #two, #three, #four, #five, #six, #seven, #eight, #nine').off('click'); //disable gameboard - game is over
     p2Wins = p2Wins + 1; // add 1 win to p2Wins
     $('.p2 h2').text(`Player Two: ${ p2Wins } wins`)
     nextGame();
   }
-  if (draw) {
-    winnerBanner = $(`<p class="banner"> It's a draw. <a href="#" class="reset">Try again?</a></p>`);
-    $('.gameboard').append(winnerBanner);
+  if ((draw) && (o === false) && (x === false)) {
+    winnerBanner = $(`<p class="banner"> It's a draw. <a href="#" class="reset">Try again?</a></p>`).fadeIn( "slow" );
+    $('.gameboard').after(winnerBanner);
     $('#one, #two, #three, #four, #five, #six, #seven, #eight, #nine').off('click'); //disable gameboard - game is over
     nextGame();
 
@@ -171,7 +171,7 @@ const nextPlayer = function() { // If current player is 0 (player 1), make curre
   }
 };
 
-const nextGame = function() { //TODO: Function to clear gameboard and start again
+const nextGame = function() { // Function to clear gameboard and start again
 $('.reset').on('click', function() {
   $('.x').remove();
   $('.o').remove();

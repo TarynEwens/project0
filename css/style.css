@@ -38,16 +38,16 @@ p {
 }
 
 .gameboard {
-  width: 450px;
-  height: 460px;
+  width: 345px;
+  height: 345px;
   margin: 0 auto;
   padding: 0;
 }
 
 #one, #two, #three, #four, #five, #six, #seven, #eight, #nine {
 
-  width: 150px;
-  height: 150px;
+  width: 115px;
+  height: 115px;
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -96,7 +96,7 @@ p {
 
 .players {
   width: 80%;
-  margin: 95px auto;
+  margin: 60px auto 0 auto;
 }
 
 .p1 {
@@ -143,6 +143,8 @@ p {
   font-size: 2em;
   font-weight: 300;
   color: #777676;
+  padding: 20px 0;
+  text-align: center;
 }
 
 .banner a {
@@ -152,8 +154,8 @@ p {
 }
 
 .x {
-  font-size: 80px;
-  line-height:130px;
+  font-size: 60px;
+  line-height:90px;
   color: #05dbd9;
   font-weight: 600;
   text-align: center;
@@ -162,11 +164,51 @@ p {
 }
 
 .o {
-  font-size: 80px;
-  line-height:130px;
+  font-size: 60px;
+  line-height:90px;
   color: #e88c7d;
   font-weight: 600;
   text-align: center;
   margin: 0;
   vertical-align: center;
+}
+
+.iconinputdiv {
+  width: 49%;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.iconinputdiv p {
+  font-family: "Open Sane", "Helvetica", Arial, sans-serif;
+  font-weight: 300;
+  color: #777676;
+  text-align: center;
+}
+
+input {
+  font-family: "Open Sane", "Helvetica", Arial, sans-serif;
+  font-weight: 300;
+  color: #777676;
+  text-align: center;
+  background-color: #F8F8F8;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #777676;
+}
+
+button {
+  font-family: "Open Sane", "Helvetica", Arial, sans-serif;
+  font-weight: 300;
+  color: #777676;
+  text-align: center;
+  background-color: #F8F8F8;
+}
+
+.iconinputdiv input {
+  width: 6em;
+  margin: 0 auto;
+
 }
