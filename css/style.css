@@ -78,7 +78,7 @@ header {
 p {
   text-align: center;
   color: #777676;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 1.5em;
 }
 
@@ -190,8 +190,9 @@ p {
 
 .players {
   width: 80%;
-  margin: 60px auto;
+  margin: 20px auto;
   display: none;
+  padding: 0;
 }
 
 .p1 {
@@ -252,6 +253,7 @@ p {
   color: #777676;
   padding: 20px 0;
   text-align: center;
+  margin: 0;
 }
 
 .banner a {
@@ -320,4 +322,5 @@ button {
 .landing {
   width: 50%;
   margin: 80px auto;
+
 }

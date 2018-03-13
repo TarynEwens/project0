@@ -6,12 +6,11 @@ let pClass;
 let currentPlayer = 0;
 let p1Name;
 let p2Name;
+let flag;
 
 
 
 $(document).ready(function() {
-  // inputSubmit();
-
 
   $('#playerNameForm').submit(function () {
     p1Name = $('#p1Name').val();
@@ -21,36 +20,48 @@ $(document).ready(function() {
     landingToMain();
     startingPlayer();
     console.log(currentPlayer);
-
   });
+
 
 });
 
 let startingPlayer = function() {
-  $('.players p').fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeIn(1000).fadeIn(1000).fadeIn(1000);
+  $('.players p').fadeIn(1000).fadeOut(1000).fadeIn(1000);
 
   $('.p1').on('click', function () {
     currentPlayer = 0;
+    console.log(currentPlayer);
     $('.p2-indicator').css('opacity', '0'); // Turn opacity to 1 for p2 indicator
     $('.p1-indicator').css('opacity', '1'); // Turn opacity to 0 for p1 indicator
-    console.log(currentPlayer)
-    $('.players p').css('display', 'none');
+    console.log(currentPlayer);
+    $('.players p').css('visibility', 'hidden');
+    $('.p1 h2').hover(function() {
+      $(this).css('font-weight', '300');
+    })
+    $('.p2 h2').hover(function() {
+      $(this).css('font-weight', '300');
+    })
     $('.p1').off('click');
-    $('.p2 h2:hover').css('font-weight', '300');
-    $('.p1 h2:hover').css('font-weight', '300');
+    $('.p2').off('click');
     game();
-  })
+  });
+
   $('.p2').on('click', function () {
     currentPlayer = 1;
     $('.p1-indicator').css('opacity', '0'); // Turn opacity to 1 for p1 indicator
     $('.p2-indicator').css('opacity', '1'); // Turn opacity to 0 for p2 indicator
     console.log(currentPlayer);
-    $('.players p').css('display', 'none');
+    $('.players p').css('visibility', 'hidden');
+    $('.p1').off('click');
     $('.p2').off('click');
     $('.p2 h2:hover').css('font-weight', '300');
     $('.p1 h2:hover').css('font-weight', '300');
     game();
-  })
+  });
+
+  console.log("flag = ", flag);
+
+
 
 };
 
@@ -58,7 +69,6 @@ let startingPlayer = function() {
 let landingToMain = function() { // change display from landing page to main page page
   $('.landing').css('display', 'none');
   $('.gameboard').css('display', 'inherit');
-  // $('header').css('display', 'inherit');
   $('.players').css('display', 'inherit');
 };
 
