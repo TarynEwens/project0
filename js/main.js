@@ -12,7 +12,7 @@ let flag;
 
 $(document).ready(function() {
 console.log(currentPlayer);
-  $('#playerNameForm').submit(function () {
+  $('#submit').on('click', function () {
 
     p1Name = $('#p1Name').val();
     p2Name = $('#p2Name').val();
