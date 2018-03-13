@@ -136,23 +136,23 @@ const findWin = function() {
   if (x) {
     winnerBanner = $(`<p class="banner"> ${ playerName } wins! <a href="#" class="reset">Try again?</a></p>`).fadeIn( "slow" ); //create a new paragraph saying which player won
     $('.gameboard').after(winnerBanner); // append to DOM after gameboard
-    $('#one, #two, #three, #four, #five, #six, #seven, #eight, #nine').off('click'); //disable gameboard - game is over
+    $('#td1, #td2, #td3, #td4, #td5, #td6, #td7, #td8, #td9').off('click'); //disable gameboard - game is over
     p1Wins = p1Wins + 1; // add 1 win to p1Wins
-    $('.p1 h2').text(`${ p1Name }: ${ p1Wins } wins`)
+    $('.p1 h2').text(`${ playerName }: ${ p1Wins } wins`)
     nextGame();
   }
   if (o) {
-    winnerBanner = $(`<p class="banner"> ${ playerName } wins! <a href="#" class="reset">Try again?</a></p>`).fadeIn( "slow" ); //create a new paragraph saying which player won
+    winnerBanner = $(`<p class="banner"> ${ playerName } wins! <a href="#" class="reset">Try again?</a></p>`).fadeIn( "slow" ); //create a new `par`agraph saying which player won
     $('.gameboard').after(winnerBanner); // append to DOM after gameboard
-    $('#one, #two, #three, #four, #five, #six, #seven, #eight, #nine').off('click'); //disable gameboard - game is over
+    $('#td1, #td2, #td3, #td4, #td5, #td6, #td7, #td8, #td9').off('click'); //disable gameboard - game is over
     p2Wins = p2Wins + 1; // add 1 win to p2Wins
-    $('.p2 h2').text(`${ p2Name }: ${ p2Wins } wins`)
+    $('.p2 h2').text(`${ playerName }: ${ p2Wins } wins`)
     nextGame();
   }
   if ((draw) && (o === false) && (x === false)) {
     winnerBanner = $(`<p class="banner"> It's a draw. <a href="#" class="reset">Try again?</a></p>`).fadeIn( "slow" );
     $('.gameboard').after(winnerBanner);
-    $('#one, #two, #three, #four, #five, #six, #seven, #eight, #nine').off('click'); //disable gameboard - game is over
+    $('#td1, #td2, #td3, #td4, #td5, #td6, #td7, #td8, #td9').off('click'); //disable gameboard - game is over
     nextGame();
 
   }

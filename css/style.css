@@ -93,7 +93,7 @@ p {
 
 }
 
-#one, #two, #three, #four, #five, #six, #seven, #eight, #nine {
+#td1, #td2, #td3, #td4, #td5, #td6, #td7, #td8, #td9 {
 
   width: 115px;
   height: 115px;
@@ -104,7 +104,7 @@ p {
   padding: 0;
 }
 
-#one {
+#td1 {
   border-bottom: 5px solid #C5C5C5;
   border-right: 5px solid #C5C5C5;
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
@@ -114,7 +114,7 @@ p {
            animation: fadein 3s;
 }
 
-#two {
+#td2 {
   border-bottom: 5px solid #C5C5C5;
   border-right: 5px solid #C5C5C5;
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
@@ -124,7 +124,7 @@ p {
            animation: fadein 3s;
 }
 
-#three {
+#td3 {
   border-bottom: 5px solid #C5C5C5;
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
       -moz-animation: fadein 3s; /* Firefox < 16 */
@@ -133,7 +133,7 @@ p {
            animation: fadein 3s;
 }
 
-#four {
+#td4 {
   border-bottom: 5px solid #C5C5C5;
   border-right: 5px solid #C5C5C5;
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
@@ -142,7 +142,7 @@ p {
         -o-animation: fadein 3s; /* Opera < 12.1 */
            animation: fadein 3s;
 }
-#five {
+#td5 {
   border-bottom: 5px solid #C5C5C5;
   border-right: 5px solid #C5C5C5;
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
@@ -152,7 +152,7 @@ p {
            animation: fadein 3s;
 }
 
-#six {
+#td6 {
   border-bottom: 5px solid #C5C5C5;
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
       -moz-animation: fadein 3s; /* Firefox < 16 */
@@ -161,7 +161,7 @@ p {
            animation: fadein 3s;
 
 }
-#seven {
+#td7 {
   border-right: 5px solid #C5C5C5;
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
       -moz-animation: fadein 3s; /* Firefox < 16 */
@@ -170,7 +170,7 @@ p {
            animation: fadein 3s;
 }
 
-#eight {
+#td8 {
   border-right: 5px solid #C5C5C5;
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
       -moz-animation: fadein 3s; /* Firefox < 16 */
@@ -179,11 +179,8 @@ p {
            animation: fadein 3s;
 }
 
-#eight:hover {
-  border-right: 5px solid #C5C5C5;
-}
 
-#nine {
+#td9 {
 
 }
 
@@ -264,7 +261,7 @@ p {
 
 .x {
   font-size: 60px;
-  line-height:90px;
+  line-height: 70px;
   color: #05dbd9;
   font-weight: 600;
   text-align: center;
@@ -274,7 +271,7 @@ p {
 
 .o {
   font-size: 60px;
-  line-height:90px;
+  line-height:70px;
   color: #e88c7d;
   font-weight: 600;
   text-align: center;
@@ -322,5 +319,5 @@ button {
 .landing {
   width: 50%;
   margin: 80px auto;
-
+  display: block;
 }

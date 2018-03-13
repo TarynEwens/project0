@@ -11,22 +11,21 @@ let flag;
 
 
 $(document).ready(function() {
-
+console.log(currentPlayer);
   $('#playerNameForm').submit(function () {
+
     p1Name = $('#p1Name').val();
     p2Name = $('#p2Name').val();
     $('.p1 h2').text(`${ p1Name }: 0 wins`);
     $('.p2 h2').text(`${ p2Name }: 0 wins`);
     landingToMain();
-    startingPlayer();
-    console.log(currentPlayer);
+
   });
-
-
+  startingPlayer();
 });
 
 let startingPlayer = function() {
-  $('.players p').fadeIn(1000).fadeOut(1000).fadeIn(1000);
+  // $('.players p').fadeIn(1000).fadeOut(1000).fadeIn(1000);
 
   $('.p1').on('click', function () {
     currentPlayer = 0;
@@ -48,29 +47,32 @@ let startingPlayer = function() {
 
   $('.p2').on('click', function () {
     currentPlayer = 1;
-    $('.p1-indicator').css('opacity', '0'); // Turn opacity to 1 for p1 indicator
-    $('.p2-indicator').css('opacity', '1'); // Turn opacity to 0 for p2 indicator
+    console.log(currentPlayer);
+    $('.p2-indicator').css('opacity', '1'); // Turn opacity to 1 for p2 indicator
+    $('.p1-indicator').css('opacity', '0'); // Turn opacity to 0 for p1 indicator
     console.log(currentPlayer);
     $('.players p').css('visibility', 'hidden');
+    $('.p1 h2').hover(function() {
+      $(this).css('font-weight', '300');
+    })
+    $('.p2 h2').hover(function() {
+      $(this).css('font-weight', '300');
+    })
     $('.p1').off('click');
     $('.p2').off('click');
-    $('.p2 h2:hover').css('font-weight', '300');
-    $('.p1 h2:hover').css('font-weight', '300');
     game();
   });
-
-  console.log("flag = ", flag);
-
-
-
 };
 
 
 let landingToMain = function() { // change display from landing page to main page page
   $('.landing').css('display', 'none');
-  $('.gameboard').css('display', 'inherit');
-  $('.players').css('display', 'inherit');
+  $('.gameboard').css('display', 'block');
+  $('.players').css('display', 'block');
+
 };
+
+
 
 let game = function() {
   // currentPlayer = 0;
@@ -79,6 +81,11 @@ let game = function() {
   click();
 
 };
+
+
+
+
+
 
 
 let click = function() {
@@ -92,88 +99,88 @@ let click = function() {
   }
   console.log(currentPlayer);
 
-  $('#one').on('click', function () {
+  $('#td1').on('click', function () {
     currentPlay = 1;
     let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
-    $('.parone').append(result);
+    $('.par1').append(result);
     board[1] = `${ icon }`;
     findPlayer(currentPlayer);
-    $('#one').off('click');
+    $('#td1').off('click');
 
 
 
   });
 
-  $('#two').on('click', function () {
+  $('#td2').on('click', function () {
     currentPlay = 2;
     let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
-    $('.partwo').append(result);
+    $('.par2').append(result);
     board[2] = `${ icon }`;
     findPlayer(currentPlayer);
-    $('#two').off('click');
+    $('#td2').off('click');
   });
 
-  $('#three').on('click', function () {
+  $('#td3').on('click', function () {
     currentPlay = 3;
     let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
-    $('.parthree').append(result);
+    $('.par3').append(result);
     board[3] = `${ icon }`;
     findPlayer(currentPlayer);
-    $('#three').off('click');
+    $('#td3').off('click');
   });
 
-  $('#four').on('click', function () {
+  $('#td4').on('click', function () {
     currentPlay = 4;
     let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
-    $('.parfour').append(result);
+    $('.par4').append(result);
     board[4] = `${ icon }`;
     findPlayer(currentPlayer);
-    $('#four').off('click');
+    $('#td4').off('click');
   });
 
-  $('#five').on('click', function () {
+  $('#td5').on('click', function () {
     currentPlay = 5;
     let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
-    $('.parfive').append(result);
+    $('.par5').append(result);
     board[5] = `${ icon }`;
     findPlayer(currentPlayer);
-    $('#five').off('click');
+    $('#td5').off('click');
   });
 
-  $('#six').on('click', function () {
+  $('#td6').on('click', function () {
     currentPlay = 6;
     let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
-    $('.parsix').append(result);
+    $('.par6').append(result);
     board[6] = `${ icon }`;
     findPlayer(currentPlayer);
-    $('#six').off('click');
+    $('#td6').off('click');
   });
 
-  $('#seven').on('click', function () {
+  $('#td7').on('click', function () {
     currentPlay = 7;
     let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
-    $('.parseven').append(result);
+    $('.par7').append(result);
     board[7] = `${ icon }`;
     findPlayer(currentPlayer);
-    $('#seven').off('click');
+    $('#td7').off('click');
   });
 
-  $('#eight').on('click', function () {
+  $('#td8').on('click', function () {
     currentPlay = 8;
     let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
-    $('.pareight').append(result);
+    $('.par8').append(result);
     board[8] = `${ icon }`;
     findPlayer(currentPlayer);
-    $('#eight').off('click');
+    $('#td8').off('click');
   });
 
-  $('#nine').on('click', function () {
+  $('#td9').on('click', function () {
     currentPlay = 9;
     let result = $(`<p class="${ pClass }"> ${ icon } </p>`).fadeIn( "slow" );
-    $('.parnine').append(result);
+    $('.par9').append(result);
     board[9] = `${ icon }`;
     findPlayer(currentPlayer);
-    $('#nine').off('click');
+    $('#td9').off('click');
   });
 
 };
