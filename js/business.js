@@ -194,3 +194,16 @@ $('.reset').on('click', function() {
   game();
 });
 };
+
+// LOCAL STORAGE
+
+// //check player score, if it is higher then top score then update top scorer name
+// function setHighScore(name, newScore) {
+//   let res = confirm("This is a new high score. Do you want to save this score ?");
+//   if (res === true)
+// {
+//   //save the winner score and name to local storage
+//   localStorage.highScore = newScore;
+//   localStorage.highScorerName = name;
+// }
+// }

@@ -192,6 +192,7 @@ p {
   padding: 0;
 }
 
+
 .p1 {
   width: 49%;
   display: inline-block;
@@ -301,7 +302,7 @@ input {
 }
 
 button {
-  font-family: "Open Sane", "Helvetica", Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica", Arial, sans-serif;
   font-weight: 300;
   color: #777676;
   text-align: center;
@@ -320,4 +321,8 @@ button {
   width: 50%;
   margin: 80px auto;
   display: block;
+}
+
+.error-banner {
+  font-size: 1em;
 }

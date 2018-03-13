@@ -13,6 +13,17 @@ let flag;
 $(document).ready(function() {
 console.log(currentPlayer);
   $('#submit').on('click', function () {
+    if ($('#p1Name').val()  === '') {
+      errorBanner = $(`<p class="error-banner">Player one, please add your name!</a></p>`).addClass('animated bounceIn')
+      $('.landing button').after(errorBanner);
+        return false;
+    }
+
+    if ($('#p2Name').val()  === '') {
+        errorBanner = $(`<p class="error-banner">Player two, please add your name!</a></p>`).fadeIn( "slow" );
+        $('.landing button').after(errorBanner);
+        return false;
+    }
 
     p1Name = $('#p1Name').val();
     p2Name = $('#p2Name').val();
