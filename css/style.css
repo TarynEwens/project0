@@ -35,6 +35,8 @@
 }
 
 body {
+background-image: url('../images/03.png');
+background-repeat: repeat;
 background-color: #F8F8F8;
 font-size: 16px;
 font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -50,7 +52,7 @@ font-weight: 300;
 
 h1 {
   font-size: 3em;
-  margin: 35px auto 10px auto;
+  margin: 35px auto 0 auto;
 }
 
 h2 {
@@ -61,6 +63,8 @@ h2 {
 main {
   width: 90%;
   margin: 0 auto;
+  padding: 30px;
+  background-color: rgba(248, 248, 248, 0.9);
 }
 
 i {
@@ -72,7 +76,9 @@ i {
 
 header {
    text-align: center;
-   /* display: none; */
+   width: 90%;
+   margin: 0 auto;
+   background-color: rgba(248, 248, 248, 0.9);
 }
 
 p {
@@ -88,7 +94,6 @@ p {
   width: 345px;
   height: 345px;
   margin: 20px auto 0 auto;
-  padding: 0;
   display: none;
 
 }
@@ -187,7 +192,7 @@ p {
 
 .players {
   width: 80%;
-  margin: 20px auto;
+  margin: 10px auto;
   display: none;
   padding: 0;
 }
@@ -252,6 +257,7 @@ p {
   padding: 20px 0;
   text-align: center;
   margin: 0;
+  overflow: hidden;
 }
 
 .banner a {
@@ -287,7 +293,7 @@ input {
   font-size: 1.5em;
   color: rgba(119,118,118,0.5);
   text-align: center;
-  background-color: #F8F8F8;
+  background-color: rgba(248, 248, 248, 0.1);
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -321,8 +327,27 @@ button {
   width: 50%;
   margin: 80px auto;
   display: block;
+  padding: 20px;
 }
 
 .error-banner {
   font-size: 1em;
+}
+
+footer {
+  display: none;
+  margin: 0px auto;
+  width: 90%;
+  padding: 30px;
+  background-color: rgba(248, 248, 248, 0.9);
+}
+
+footer p {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+footer a {
+  color: #777676;
+  font-weight: 300;
 }

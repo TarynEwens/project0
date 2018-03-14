@@ -75,6 +75,7 @@ let landingToMain = function() { // change display from landing page to main pag
   $('.landing').css('display', 'none');
   $('.gameboard').css('display', 'block');
   $('.players').css('display', 'block');
+  $('footer').css('display', 'block');
 
 };
 
