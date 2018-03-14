@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
 @import url('https://fonts.googleapis.com/css?family=Dosis:300,700');
 
+/* KEYFRAMES */
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -30,6 +32,8 @@
     to   { opacity: 1; }
 }
 
+
+/* BODY */
 * {
   box-sizing: border-box;
 }
@@ -41,6 +45,13 @@ background-color: #F8F8F8;
 font-size: 16px;
 font-family: "Open Sans", Helvetica, Arial, sans-serif;
 font-weight: 300;
+}
+
+header {
+   text-align: center;
+   width: 90%;
+   margin: 0 auto;
+   background-color: rgba(248, 248, 248, 0.9);
 }
 
 h1, h2 {
@@ -67,20 +78,6 @@ main {
   background-color: rgba(248, 248, 248, 0.9);
 }
 
-i {
-  color: #777676;
-  font-size: 1.5em;
-  font-weight: 300;
-  text-align: center;
-}
-
-header {
-   text-align: center;
-   width: 90%;
-   margin: 0 auto;
-   background-color: rgba(248, 248, 248, 0.9);
-}
-
 p {
   text-align: center;
   color: #777676;
@@ -88,16 +85,54 @@ p {
   font-size: 1.5em;
 }
 
-
-
-.gameboard {
-  width: 345px;
-  height: 345px;
-  margin: 20px auto 0 auto;
-  display: none;
-
+input {
+  font-family: "Open Sans", "Helvetica", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  color: rgba(119,118,118,0.5);
+  text-align: center;
+  background-color: rgba(248, 248, 248, 0.1);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid #777676;
+  display: block;
+  margin: 30px auto;
+  max-width: 12em;
 }
 
+button {
+  font-family: "Open Sans", "Helvetica", Arial, sans-serif;
+  font-weight: 300;
+  color: #777676;
+  text-align: center;
+  background-color: #F8F8F8;
+  display: block;
+  margin: 10px auto;
+}
+
+footer {
+  display: none;
+  margin: 0px auto;
+  width: 90%;
+  padding: 30px;
+  background-color: rgba(248, 248, 248, 0.9);
+}
+
+footer p {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+footer a {
+  color: #777676;
+  font-weight: 300;
+}
+
+
+
+
+/* GAMEBOARD ID's  */
 #td1, #td2, #td3, #td4, #td5, #td6, #td7, #td8, #td9 {
 
   width: 115px;
@@ -189,14 +224,35 @@ p {
 
 }
 
+/* LANDING PAGE */
+.landing {
+  width: 50%;
+  margin: 80px auto;
+  display: block;
+  padding: 20px;
+}
 
+.error-banner {
+  font-size: 1em;
+}
+
+/* GAMEBOARD */
+
+.gameboard {
+  width: 345px;
+  height: 345px;
+  margin: 20px auto 0 auto;
+  display: none;
+
+}
+
+/* PLAYER STYLING */
 .players {
   width: 80%;
   margin: 10px auto;
   display: none;
   padding: 0;
 }
-
 
 .p1 {
   width: 49%;
@@ -250,22 +306,6 @@ p {
   text-align: center;
 }
 
-.banner {
-  font-size: 2em;
-  font-weight: 300;
-  color: #777676;
-  padding: 20px 0;
-  text-align: center;
-  margin: 0;
-  overflow: hidden;
-}
-
-.banner a {
-  color: #777676;
-  text-decoration: none;
-  font-weight: 600;
-}
-
 .x {
   font-size: 60px;
   line-height: 70px;
@@ -287,67 +327,52 @@ p {
   margin: 10px auto;
 }
 
-input {
-  font-family: "Open Sans", "Helvetica", Arial, sans-serif;
-  font-weight: 300;
-  font-size: 1.5em;
-  color: rgba(119,118,118,0.5);
-  text-align: center;
-  background-color: rgba(248, 248, 248, 0.1);
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 2px solid #777676;
-  display: block;
-  margin: 30px auto;
-  width: 12em;
-}
 
-::-webkit-input-placeholder {
-    color: rgba(119,118,118,0.5);
-}
-
-button {
-  font-family: "Open Sans", "Helvetica", Arial, sans-serif;
+/* WINNER BANNERS */
+.banner {
+  font-size: 2em;
   font-weight: 300;
   color: #777676;
+  padding: 20px 0;
   text-align: center;
-  background-color: #F8F8F8;
-  display: block;
-  margin: 10px auto;
+  margin: 0;
+  overflow: hidden;
 }
 
-.iconinputdiv input {
-  width: 6em;
-  margin: 0 auto;
-
-}
-
-.landing {
-  width: 50%;
-  margin: 80px auto;
-  display: block;
-  padding: 20px;
-}
-
-.error-banner {
-  font-size: 1em;
-}
-
-footer {
-  display: none;
-  margin: 0px auto;
-  width: 90%;
-  padding: 30px;
-  background-color: rgba(248, 248, 248, 0.9);
-}
-
-footer p {
-  font-size: 0.8em;
-  font-weight: 300;
-}
-
-footer a {
+.banner a {
   color: #777676;
-  font-weight: 300;
+  text-decoration: none;
+  font-weight: 600;
 }
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width:776px){ /*When footer and inputs collapse*/
+	footer {
+		font-size: 10px;
+	}
+
+  input {
+    font-size: 1em;
+    overflow: hidden;
+  }
+
+  .landing {
+    width: 100%;
+  }
+
+  @media only screen and (max-width:445px){ /*When gameboard collapses*/
+
+  .gameboard {
+    width: 320px;
+  }
+
+  #td1, #td2, #td3, #td4, #td5, #td6, #td7, #td8, #td9 {
+
+    width: 104px;
+    height: 104px;
+  }
+
+  main {
+    width: 100%;
+  }
