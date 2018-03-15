@@ -1,4 +1,7 @@
+//CONECTION TEST
 console.log("connected main");
+
+//GLOBAL VARIABLES
 let result;
 let currentPlay;
 let icon;
@@ -9,10 +12,10 @@ let p2Name;
 let flag;
 
 
-
+//DOCUMENT READY FUNCTION
 $(document).ready(function() {
-  console.log(currentPlayer);
 
+// SUBMIT FUNCTION - When submit button is clicked, create an error banner if there is no value in the inputs. If inputs contain values, set p-Name as the value, then update the h2 containing player names to reflect the updated names. Then call landing to main function, and after that completes, call startingPlayer function.
   $('#submit').on('click', function () {
     if ($('#p1Name').val()  === '') {
       errorBanner = $(`<p class="error-banner">Player one, please add your name!</a></p>`).addClass('animated bounceIn');
@@ -35,15 +38,15 @@ $(document).ready(function() {
 });
 
 
-
+// STARTING PLAYER FUNCTION - Players choose which player will go first
 let startingPlayer = function() {
 
-  $('.p1').on('click', function () {
+  $('.p1').on('click', function () { //If player one div is clicked on, current player is set to 0, and a variety of CSS properties and changed to reflect the players decision.
     currentPlayer = 0;
-    $('.p2-indicator').css('opacity', '0'); // Turn opacity to 1 for p2 indicator
-    $('.p1-indicator').css('opacity', '1'); // Turn opacity to 0 for p1 indicator
+    $('.p2-indicator').css('opacity', '0');
+    $('.p1-indicator').css('opacity', '1');
     $('.players p').css('visibility', 'hidden');
-    $('.p1 h2').hover(function() {
+    $('.p1 h2').hover(function() { //For changing hover elements, had to put it into a function before changing properties
       $(this).css('font-weight', '300');
     });
     $('.p2 h2').hover(function() {
@@ -51,13 +54,13 @@ let startingPlayer = function() {
     });
     $('.p1').off('click');
     $('.p2').off('click');
-    click();
+    click(); // Call click function when complete
   });
 
-  $('.p2').on('click', function () {
+  $('.p2').on('click', function () { // Same as above for player 2
     currentPlayer = 1;
-    $('.p2-indicator').css('opacity', '1'); // Turn opacity to 1 for p2 indicator
-    $('.p1-indicator').css('opacity', '0'); // Turn opacity to 0 for p1 indicator
+    $('.p2-indicator').css('opacity', '1');
+    $('.p1-indicator').css('opacity', '0');
     $('.players p').css('visibility', 'hidden');
     $('.p1 h2').hover(function() {
       $(this).css('font-weight', '300');
@@ -71,14 +74,15 @@ let startingPlayer = function() {
   });
 };
 
-let landingToMain = function() { // change display from landing page to main page page
+// LANDING TO MAIN FUNCTION - change display from landing page to main page page using display none and display block
+let landingToMain = function() {
   $('.landing').css('display', 'none');
   $('.gameboard').css('display', 'block');
   $('.players').css('display', 'block');
   $('footer').css('display', 'block');
-
 };
 
+// CLICK FUNCTION - Starts by saying if current player is 0 icon is X and class is x, and vice versa
 let click = function() {
   if (currentPlayer === 0) {
     icon = "X";
@@ -87,6 +91,8 @@ let click = function() {
     icon = "O";
     pClass = "o";
   }
+
+  //On each cells click, pop one number out of the available array. Create a result variable with a paragraph with the icon, which will fade in slowly. Append result to empty paragraph inside cell. Add the icon into matching board object. call find player function, and turn off that cells click so it can't be used again.
 
   $('#td1').on('click', function () {
     available.pop();

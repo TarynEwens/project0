@@ -89,7 +89,7 @@ input {
   font-family: "Open Sans", "Helvetica", Arial, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
-  color: rgba(119,118,118,0.5);
+  color: #777676;
   text-align: center;
   background-color: rgba(248, 248, 248, 0.1);
   border-top: 0;
@@ -99,6 +99,19 @@ input {
   display: block;
   margin: 30px auto;
   max-width: 12em;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(119,118,118,0.5);
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(119,118,118,0.5);
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(119,118,118,0.5);
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba(119,118,118,0.5);
 }
 
 button {
@@ -361,18 +374,8 @@ footer a {
     width: 100%;
   }
 
+
   @media only screen and (max-width:445px){ /*When gameboard collapses*/
-
-  .gameboard {
-    width: 320px;
-  }
-
-  #td1, #td2, #td3, #td4, #td5, #td6, #td7, #td8, #td9 {
-
-    width: 104px;
-    height: 104px;
-  }
-
   main {
     width: 100%;
   }
@@ -381,10 +384,20 @@ footer a {
     font-size: 1em;
   }
 
-  .banner {
-    font-size: 1em;
+  p {
+    font-size: 1.5em;
   }
 
-  p {
+  #td1, #td2, #td3, #td4, #td5, #td6, #td7, #td8, #td9 {
+
+    width: 104px;
+    height: 104px;
+  }
+
+  .gameboard {
+    width: 320px;
+  }
+
+  .banner {
     font-size: 1.5em;
   }
