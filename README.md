@@ -55,7 +55,7 @@ To find a draw I checked to see if the 'available' arrays length was 0. If it wa
 - I would like to restructure my logic in a way that doesn't require hard coding any wins, so that the game board can be made larger without making too many changes to the logic.
 
 ## License
-This project is dual licensed under the MIT and GPL licenses.
+This project is dual licensed under the WTFPL license.
 
 ## Acknowledgments
 Thanks to Joel, John and Theo @ General Assembly for all of the help debugging along the way!
