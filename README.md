@@ -5,7 +5,7 @@ See it in action here: http://tarynelise.github.io/project0
 
 It is a game for two players, X and O, who take turns marking the spaces in a 3Ã—3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
 
-### How to play
+## How to play
 - Type in your chosen names for player 1 and player 2 and then hit submit.
 - Your game board will load and ask you to choose which player will go first - click the players name to choose.
 - A coloured X or O under the players name will indicate who's turn it is.
@@ -13,16 +13,16 @@ It is a game for two players, X and O, who take turns marking the spaces in a 3Ã
 - Try to get three in a row!
 - Click try again to keep playing again, and again, and again, and again, and again, and again...
 
-#### Objective
+## Objective
 To build a web application from scratch that allows two players to play tic tac toe.
 
-#### Built With
+## Built With
 - HTML
 - CSS (including animate.css and normalize.css)
 - Javascript
 - jQuery
 
-#### Approach
+## Approach
 My approach for this task changed multiple times throughout the week.
 
 I initially thought I'd solved the logic easily, by creating an app that pushed each players chosen square numbers into an array, which was later compared to winning arrays. All well and good, until a player takes more than 3 squares to achieve a win. Dead end.
@@ -51,13 +51,13 @@ To find a draw I checked to see if the 'available' arrays length was 0. If it wa
 
 7. I later added a counter which adds 1 to each players 'win' variable, so that that multiple rounds can be tracked, as well as a log in feature so the players can choose their own name.
 
-#### To do:
+## To do:
 - I would like to restructure my logic in a way that doesn't require hard coding any wins, so that the game board can be made larger without making too many changes to the logic.
 
-#### License
+## License
 This project is dual licensed under the MIT and GPL licenses.
 
-#### Acknowledgments
+## Acknowledgments
 Thanks to Joel, John and Theo @ General Assembly for all of the help debugging along the way!
 Also to @avielgoh for the inspiration behind the log in page!
 
