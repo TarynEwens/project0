@@ -41,7 +41,7 @@ const findPlayer = function(currentPlayer) {
 //FIND MATCH FUNCTION
 const findMatch = function(){
   for (var i = 0; i < waysToWin.length; i++) {
-    //HORIZONTAL AND VERTICAL WINS - Loop through both ways to win (X X X or O O O) and if all of each column or row match, push the match into the match array, and then convert to string so it can be compared in next function. Call findWIN function if a match is found.
+    // Loop through both ways to win (X X X or O O O) and if all of each column or row or diagonal match, push the match into the match array, and then convert to string so it can be compared in next function. Call findWIN function if a match is found.
     if (($('*[data-column="A"]').text()) === (waysToWin[i])) {
       match.push(waysToWin[i]);
       matchString = match.toString();
@@ -66,25 +66,14 @@ const findMatch = function(){
       match.push(waysToWin[i]);
       matchString = match.toString();
       findWin();
-    }
-
-    //DIAGONALS - Hard coded wins for the diagonals - if all squares are equal to X then matchString is X X X, or vice versa, then findWin function is called - break added in to stop the loop from repeating.
-    else if ((board.A1 === `X`) && (board.B2 === `X`) && (board.C3 === `X`)) {
-      matchString = " X  X  X ";
+    } else if (($('*[data-diagonal1="true"]').text()) === (waysToWin[i])) {
+      match.push(waysToWin[i]);
+      matchString = match.toString();
       findWin();
-      break;
-    } else if ((board.A1 === `O`) && (board.B2 === `O`) && (board.C3 === `O`)) {
-      matchString = " O  O  O ";
+    } else if (($('*[data-diagonal2="true"]').text()) === (waysToWin[i])) {
+      match.push(waysToWin[i]);
+      matchString = match.toString();
       findWin();
-      break;
-    } else if ((board.C1 === `X`) && (board.B2 === `X`) && (board.A3 === `X`)) {
-      matchString = " X  X  X ";
-      findWin();
-      break;
-    } else if ((board.C1 === `O`) && (board.B2 === `O`) && (board.A3 === `O`)) {
-      matchString = " O  O  O ";
-      findWin();
-      break;
     }
 
     //DRAW - If length of available array is 0 then create a banner (paragraph) that tells the players its a draw and offers reset link (also fades in slowly), then calls NextGame function - break added in to stop the loop from repeating.

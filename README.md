@@ -42,7 +42,8 @@ In this approach I decided that a better way would be to use 'data' in the HTML 
 
 4. When 'findMatch' function is called, I created a for loop that will loop through an array of win situations (eg. X X X or O O O). I selected all items in each row, or column at a time and checked for a match. If a match was found, I pushed the results into a new array and then turned that into a string so it could be compared later.
 
-Diagonals were trickier, so I ended up hard coding each win situation in for those two problems.
+Diagonals were trickier, so I first hard coded each win situation in for those two problems. I later gave each diagonal wins, a diagonal data property so I could use the same technique for the rows and columns - hooray for getting rid of the hard coding!
+
 To find a draw I checked to see if the 'available' arrays length was 0. If it was, and no previous match had been found, then a draw was determined.
 
 5. If a match was found, the 'findWin' function is called which states if the winning string is 'X X X' then player 1 is the winner, or vice versa.
@@ -52,8 +53,9 @@ To find a draw I checked to see if the 'available' arrays length was 0. If it wa
 7. I later added a counter which adds 1 to each players 'win' variable, so that that multiple rounds can be tracked, as well as a log in feature so the players can choose their own name.
 
 ## To do:
-- I would like to restructure my logic in a way that doesn't require hard coding any wins, so that the game board can be made larger without making too many changes to the logic.
-- I would also like to restructure my Javascript so that only the main.js deals with what's happening in the browser, but I don't quite understand how to make this work yet.
+[x] I would like to restructure my logic in a way that doesn't require hard coding any wins, so that the game board can be made larger without making too many changes to the logic.
+[ ] I would also like to restructure my Javascript so that only the main.js deals with what's happening in the browser, but I don't quite understand how to make this work yet.
+[ ] Add functionality to the game so that the board can be expanded to another size
 
 ## License
 This project is licensed under the WTFPL license.

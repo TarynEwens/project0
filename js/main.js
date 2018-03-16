@@ -46,9 +46,8 @@ let startingPlayer = function() {
     $('.p2-indicator').css('opacity', '0');
     $('.p1-indicator').css('opacity', '1');
     $('.players p').css('visibility', 'hidden');
-    $('.p1 h2').hover(function() { //For changing hover elements, had to put it into a function before changing properties
-      $(this).css('font-weight', '300');
-    });
+
+
     $('.p2 h2').hover(function() {
       $(this).css('font-weight', '300');
     });
