@@ -53,9 +53,10 @@ To find a draw I checked to see if the 'available' arrays length was 0. If it wa
 
 ## To do:
 - I would like to restructure my logic in a way that doesn't require hard coding any wins, so that the game board can be made larger without making too many changes to the logic.
+- I would also like to restructure my Javascript so that only the main.js deals with what's happening in the browser, but I don't quite understand how to make this work yet.
 
 ## License
-This project is dual licensed under the WTFPL license.
+This project is licensed under the WTFPL license.
 
 ## Acknowledgments
 Thanks to Joel, John and Theo @ General Assembly for all of the help debugging along the way!

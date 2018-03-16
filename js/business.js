@@ -19,10 +19,9 @@ let match = [];
 let matchString;
 let winner;
 let playerName;
-let winnerBanner;
+let $winnerBanner;
 let p1Wins = 0;
 let p2Wins = 0;
-
 
 
 //FIND PLAYER FUNCTION
@@ -90,8 +89,8 @@ const findMatch = function(){
 
     //DRAW - If length of available array is 0 then create a banner (paragraph) that tells the players its a draw and offers reset link (also fades in slowly), then calls NextGame function - break added in to stop the loop from repeating.
     else if (available.length === 0) {
-      winnerBanner = $(`<p class="banner"> It's a draw. <a href="#" class="reset">Try again?</a></p>`).fadeIn( "slow" );
-      $('.gameboard').after(winnerBanner);
+      $winnerBanner = $(`<p class="banner"> It's a draw. <a href="#" class="reset">Try again?</a></p>`).fadeIn( "slow" );
+      $('.gameboard').after($winnerBanner);
       $('td').off('click'); //disable gameboard - game is over
       nextGame();
       break;
@@ -109,8 +108,8 @@ const findWin = function() {
     winner = p2Name;
   }
   // create a winner banner that tells the players who won, then add it to the DOM after the gameboard. Turn off click function on all cells in the gameboard. If the winner variable is equal to the p-Name variable, a counter will add 1 to p-Wins, and the h2 with the players name and # of wins will be updated. Call next game function.
-  winnerBanner = $(`<p class="banner"> ${ winner } wins! <a href="#" class="reset">Try again?</a></p>`).fadeIn( "slow" ); //create a new paragraph saying which player won
-  $('.gameboard').after(winnerBanner); // append to DOM after gameboard
+  $winnerBanner = $(`<p class="banner"> ${ winner } wins! <a href="#" class="reset">Try again?</a></p>`).fadeIn( "slow" ); //create a new paragraph saying which player won
+  $('.gameboard').after($winnerBanner); // append to DOM after gameboard
   $('td').off('click'); //disable gameboard - game is over
   if (winner === p1Name) {
     p1Wins = p1Wins + 1; // add 1 win to p1Wins

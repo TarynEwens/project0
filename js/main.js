@@ -76,10 +76,10 @@ let startingPlayer = function() {
 
 // LANDING TO MAIN FUNCTION - change display from landing page to main page page using display none and display block
 let landingToMain = function() {
-  $('.landing').css('display', 'none');
-  $('.gameboard').css('display', 'block');
-  $('.players').css('display', 'block');
-  $('footer').css('display', 'block');
+  $('.landing').hide();
+  $('.gameboard').show();
+  $('.players').show();
+  $('footer').show();
 };
 
 // CLICK FUNCTION - Starts by saying if current player is 0 icon is X and class is x, and vice versa
