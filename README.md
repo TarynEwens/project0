@@ -53,9 +53,9 @@ To find a draw I checked to see if the 'available' arrays length was 0. If it wa
 7. I later added a counter which adds 1 to each players 'win' variable, so that that multiple rounds can be tracked, as well as a log in feature so the players can choose their own name.
 
 ## To do:
-[x] I would like to restructure my logic in a way that doesn't require hard coding any wins, so that the game board can be made larger without making too many changes to the logic.
-[ ] I would also like to restructure my Javascript so that only the main.js deals with what's happening in the browser, but I don't quite understand how to make this work yet.
-[ ] Add functionality to the game so that the board can be expanded to another size
+- [x] I would like to restructure my logic in a way that doesn't require hard coding any wins, so that the game board can be made larger without making too many changes to the logic.
+* [ ] I would also like to restructure my Javascript so that only the main.js deals with what's happening in the browser, but I don't quite understand how to make this work yet.
+- [ ] Add functionality to the game so that the board can be expanded to another size
 
 ## License
 This project is licensed under the WTFPL license.
