@@ -1,7 +1,9 @@
 # Tic Tac Toe
 A simple tic tac toe (naughts and crosses) game with a minimalist vibe.
 
-See it in action here: http://tarynelise.github.io/project0
+See it in action here: https://tarynewens.github.io/project0/
+
+Only compatible with Chrome.
 
 It is a game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
 
